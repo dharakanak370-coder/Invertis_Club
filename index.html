@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Clubs & Campus Community — Invertis University, Bareilly</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'inv-blue': '#1E40AF',
+                        'inv-blue-light': '#3B82F6',
+                        'inv-blue-electric': '#2563EB',
+                        'inv-orange': '#F97316',
+                        'inv-orange-vibrant': '#EA580C',
+                        'inv-orange-glow': '#FB923C',
+                        'inv-charcoal': '#1A1A1A',
+                        'inv-graphite': '#2D2D2D',
+                        'inv-graphite-light': '#3A3A3A',
+                        'inv-silver': '#C0C0C0',
+                        'inv-silver-light': '#E5E7EB',
+                        'inv-cream': '#F5F5F0',
+                        'inv-offwhite': '#FAFAF8',
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'ultra-tight': '-0.05em',
+                        'ultra-wide': '0.2em',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-inv-cream font-body overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <img src="https://www.invertisuniversity.ac.in/images/logo.png"
+                     alt="Invertis University Logo"
+                     class="inv-logo logo-white group-hover:opacity-100 opacity-90 transition-opacity duration-300">
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="nav-link text-xs font-medium tracking-wide uppercase text-inv-silver hover:text-inv-cream transition-colors duration-150">About</a>
+                <a href="#clubs" class="nav-link text-xs font-medium tracking-wide uppercase text-inv-silver hover:text-inv-cream transition-colors duration-150">Clubs</a>
+                <a href="#discover" class="nav-link text-xs font-medium tracking-wide uppercase text-inv-silver hover:text-inv-cream transition-colors duration-150">Discover</a>
+                <a href="#campus" class="nav-link text-xs font-medium tracking-wide uppercase text-inv-silver hover:text-inv-cream transition-colors duration-150">Campus Life</a>
+                <a href="#heritage" class="nav-link text-xs font-medium tracking-wide uppercase text-inv-silver hover:text-inv-cream transition-colors duration-150">Heritage</a>
+                <a href="#contact" class="nav-link text-xs font-medium tracking-wide uppercase text-inv-silver hover:text-inv-cream transition-colors duration-150">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#clubs" class="hidden md:inline-flex magnetic-btn px-5 py-2.5 bg-inv-orange text-black text-xs font-semibold tracking-wide uppercase hover:bg-inv-orange-glow transition-all duration-300">Explore Clubs</a>
+                <button id="mobileMenuBtn" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5">
+                    <span class="w-5 h-px bg-inv-cream transition-all duration-300" id="menuLine1"></span>
+                    <span class="w-5 h-px bg-inv-cream transition-all duration-300" id="menuLine2"></span>
+                    <span class="w-3 h-px bg-inv-cream transition-all duration-300 ml-auto" id="menuLine3"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-40 bg-black/98 backdrop-blur-md flex flex-col items-center justify-center gap-8 transform translate-x-full transition-transform duration-500">
+        <img src="https://www.invertisuniversity.ac.in/images/logo.png" alt="Invertis University" class="h-12 mb-4 logo-white opacity-80">
+        <a href="#about" class="mobile-nav-link text-2xl font-display font-medium text-inv-cream hover:text-inv-orange transition-colors">About</a>
+        <a href="#clubs" class="mobile-nav-link text-2xl font-display font-medium text-inv-cream hover:text-inv-orange transition-colors">Clubs</a>
+        <a href="#discover" class="mobile-nav-link text-2xl font-display font-medium text-inv-cream hover:text-inv-orange transition-colors">Discover</a>
+        <a href="#campus" class="mobile-nav-link text-2xl font-display font-medium text-inv-cream hover:text-inv-orange transition-colors">Campus Life</a>
+        <a href="#heritage" class="mobile-nav-link text-2xl font-display font-medium text-inv-cream hover:text-inv-orange transition-colors">Heritage</a>
+        <a href="#contact" class="mobile-nav-link text-2xl font-display font-medium text-inv-cream hover:text-inv-orange transition-colors">Contact</a>
+        <div class="mt-8"><a href="#clubs" class="magnetic-btn px-8 py-3 bg-inv-orange text-black text-sm font-semibold tracking-wide uppercase">Explore Clubs</a></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-end overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://www.invertisuniversity.ac.in/uploads/image/20260311064128.webp" alt="Invertis University Campus Life" class="w-full h-full object-cover hero-parallax" id="heroImage">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-[1800px] mx-auto px-6 md:px-12 pb-20 md:pb-28 w-full">
+            <div class="grid lg:grid-cols-12 gap-8 items-end">
+                <div class="lg:col-span-8">
+                    <div class="mb-6 animate-fadeInUp" style="animation-delay: 0.2s; opacity: 0;">
+                        <span class="inline-flex items-center gap-2 px-3 py-1.5 border border-inv-silver/20 rounded-sm">
+                            <span class="w-1.5 h-1.5 rounded-full bg-inv-orange animate-pulse"></span>
+                            <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-silver">Invertis University • Bareilly</span>
+                        </span>
+                    </div>
+                    <h1 class="hero-heading text-5xl md:text-7xl lg:text-[6.5rem] font-display font-medium leading-[0.9] tracking-ultra-tight text-inv-cream mb-8">
+                        <span class="block animate-fadeInUp" style="animation-delay: 0.3s; opacity: 0;">Imagine.</span>
+                        <span class="block animate-fadeInUp" style="animation-delay: 0.5s; opacity: 0;">Innovate.</span>
+                        <span class="block animate-fadeInUp text-inv-orange" style="animation-delay: 0.7s; opacity: 0;">Challenge.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl font-light text-inv-silver max-w-xl mb-8 animate-fadeInUp" style="animation-delay: 0.9s; opacity: 0;">Where every passion finds a community.</p>
+                    <p class="text-sm text-inv-silver/70 max-w-lg mb-10 leading-relaxed animate-fadeInUp" style="animation-delay: 1.1s; opacity: 0;">Discover the student clubs of Invertis University — communities built around creativity, technology, leadership, culture, sports, social impact and personal growth.</p>
+                    <div class="flex flex-wrap gap-4 mb-12 animate-fadeInUp" style="animation-delay: 1.3s; opacity: 0;">
+                        <a href="#clubs" class="magnetic-btn px-8 py-3.5 bg-inv-orange text-black text-xs font-semibold tracking-wide uppercase hover:bg-inv-orange-glow transition-all duration-300 flex items-center gap-2">Explore Clubs <span class="iconify" data-icon="lucide:arrow-right" data-width="14"></span></a>
+                        <a href="#contact" class="magnetic-btn px-8 py-3.5 border border-inv-silver/30 text-inv-cream text-xs font-semibold tracking-wide uppercase hover:border-inv-orange hover:text-inv-orange transition-all duration-300">Join the Community</a>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 lg:text-right animate-fadeInUp" style="animation-delay: 1.5s; opacity: 0;">
+                    <div class="inline-flex flex-col lg:items-end gap-4">
+                        <div class="flex items-center gap-3 lg:flex-row-reverse"><span class="text-4xl md:text-5xl font-display font-medium text-inv-cream">8</span><span class="text-xs font-semibold tracking-ultra-wide uppercase text-inv-silver">Student<br>Clubs</span></div>
+                        <div class="w-12 h-px bg-inv-orange lg:ml-auto"></div>
+                        <div class="flex items-center gap-3 lg:flex-row-reverse"><span class="text-4xl md:text-5xl font-display font-medium text-inv-cream">1</span><span class="text-xs font-semibold tracking-ultra-wide uppercase text-inv-silver">Campus<br>Community</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-bounce">
+            <span class="text-[9px] tracking-ultra-wide uppercase text-inv-silver/50">Scroll</span>
+            <div class="w-px h-8 bg-gradient-to-b from-inv-orange to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- University Identity Section -->
+    <section id="about" class="relative py-24 md:py-36 bg-inv-charcoal">
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12">
+            <div class="grid lg:grid-cols-2 gap-16 md:gap-24 items-center">
+                <div class="scroll-animate-left">
+                    <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-6 block">About the University</span>
+                    <h2 class="section-heading text-3xl md:text-5xl lg:text-6xl font-display font-medium leading-[1.05] tracking-tight text-inv-cream mb-8">More Than a University.<br><span class="text-inv-orange">A Community of Possibilities.</span></h2>
+                    <div class="space-y-6 text-sm md:text-base text-inv-silver leading-relaxed max-w-lg">
+                        <p>Invertis University, Bareilly is committed to holistic development, professional growth and high-quality education. Through experiential learning, industry interaction, research opportunities and inspired teaching, students are encouraged to develop knowledge, confidence and the ability to contribute meaningfully to society.</p>
+                        <p>The student club ecosystem extends this experience beyond the classroom, giving students opportunities to explore interests, develop leadership skills, collaborate with peers and create lasting campus memories.</p>
+                    </div>
+                </div>
+                <div class="scroll-animate-right">
+                    <div class="grid grid-cols-2 gap-6 md:gap-8">
+                        <div class="border border-inv-graphite-light/20 p-6 md:p-8 hover:border-inv-orange/30 transition-all duration-300">
+                            <span class="text-4xl md:text-5xl font-display font-medium text-inv-cream counter" data-target="2010">0</span>
+                            <div class="w-8 h-px bg-inv-orange my-4"></div>
+                            <span class="text-xs font-semibold tracking-wide uppercase text-inv-silver">University Established</span>
+                        </div>
+                        <div class="border border-inv-graphite-light/20 p-6 md:p-8 hover:border-inv-orange/30 transition-all duration-300">
+                            <span class="text-4xl md:text-5xl font-display font-medium text-inv-orange">8</span>
+                            <div class="w-8 h-px bg-inv-orange my-4"></div>
+                            <span class="text-xs font-semibold tracking-wide uppercase text-inv-silver">Student Clubs</span>
+                        </div>
+                        <div class="border border-inv-graphite-light/20 p-6 md:p-8 hover:border-inv-orange/30 transition-all duration-300">
+                            <span class="text-2xl md:text-3xl font-display font-medium text-inv-cream">Multiple</span>
+                            <div class="w-8 h-px bg-inv-orange my-4"></div>
+                            <span class="text-xs font-semibold tracking-wide uppercase text-inv-silver">Academic & Creative Domains</span>
+                        </div>
+                        <div class="border border-inv-orange/30 p-6 md:p-8 bg-inv-orange/5">
+                            <span class="text-xs font-semibold tracking-ultra-wide uppercase text-inv-orange mb-3 block">Motto</span>
+                            <span class="text-lg md:text-xl font-display font-medium text-inv-cream leading-tight">Imagine.<br>Innovate.<br>Challenge.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Club Ecosystem Section -->
+    <section id="clubs" class="relative py-24 md:py-36 bg-black">
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12">
+            <div class="text-center mb-16 md:mb-24 scroll-animate">
+                <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-6 block">The Club Ecosystem</span>
+                <h2 class="section-heading text-4xl md:text-6xl lg:text-7xl font-display font-medium tracking-tight text-inv-cream mb-4">8 Clubs.</h2>
+                <p class="text-xl md:text-2xl font-light text-inv-silver">Countless Possibilities.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+
+                <!-- Club 01 - ABHIRUCHI -->
+                <div class="club-card relative overflow-hidden rounded-sm cursor-pointer group lg:row-span-2" onclick="showClubToast('Abhiruchi')">
+                    <div class="relative h-64 md:h-80 lg:h-full min-h-[400px]">
+                        <img src="https://www.invertisuniversity.ac.in/images/abhiruchi-clubs-5.webp" alt="Abhiruchi - The Hobby Club" class="club-card-image w-full h-full object-cover">
+                        <div class="club-card-overlay absolute inset-0 bg-black/50"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                        <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-2 block">Club 01</span>
+                        <h3 class="text-2xl md:text-3xl font-display font-medium text-inv-cream mb-1 tracking-tight">ABHIRUCHI</h3>
+                        <p class="text-xs font-semibold tracking-wide uppercase text-inv-silver mb-3">The Hobby Club</p>
+                        <p class="text-sm text-inv-silver/70 leading-relaxed mb-4 max-w-xs">A space where students explore passions, discover hobbies and connect with others who share similar interests.</p>
+                        <div class="flex items-center gap-2 text-inv-orange"><span class="text-xs font-semibold tracking-wide uppercase">Explore Abhiruchi</span><span class="iconify club-card-arrow" data-icon="lucide:arrow-right" data-width="14"></span></div>
+                    </div>
+                </div>
+
+                <!-- Club 02 - PANACHE -->
+                <div class="club-card relative overflow-hidden rounded-sm cursor-pointer group" onclick="showClubToast('Panache')">
+                    <div class="relative h-64 md:h-80">
+                        <img src="https://www.invertisuniversity.ac.in/uploads/image/20260306051325.webp" alt="Panache - The Arts Club" class="club-card-image w-full h-full object-cover">
+                        <div class="club-card-overlay absolute inset-0 bg-black/50"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                        <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-1 block">Club 02</span>
+                        <h3 class="text-xl font-display font-medium text-inv-cream mb-1 tracking-tight">PANACHE</h3>
+                        <p class="text-[10px] font-semibold tracking-wide uppercase text-inv-silver mb-2">The Arts Club</p>
+                        <p class="text-sm text-inv-silver/70 leading-relaxed mb-3">Art • Design • Creativity • Expression</p>
+                        <div class="flex items-center gap-2 text-inv-orange"><span class="text-[10px] font-semibold tracking-wide uppercase">Explore Panache</span><span class="iconify club-card-arrow" data-icon="lucide:arrow-right" data-width="12"></span></div>
+                    </div>
+                </div>
+
+                <!-- Club 03 - THE RESPONSIBLE INVERTIAN -->
+                <div class="club-card relative overflow-hidden rounded-sm cursor-pointer group" onclick="showClubToast('The Responsible Invertian')">
+                    <div class="relative h-64 md:h-80">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5HJeXL_5CoKkI5aKKuSjdA_7ChIv6yE6GY0GwugTfwsBBiOXARj_s8yC7&s=10" alt="The Responsible Invertian" class="club-card-image w-full h-full object-cover">
+                        <div class="club-card-overlay absolute inset-0 bg-black/50"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                        <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-1 block">Club 03</span>
+                        <h3 class="text-xl font-display font-medium text-inv-cream mb-1 tracking-tight leading-tight">THE RESPONSIBLE INVERTIAN</h3>
+                        <p class="text-[10px] font-semibold tracking-wide uppercase text-inv-silver mb-2">The Social Club</p>
+                        <p class="text-sm text-inv-silver/70 leading-relaxed mb-3">Community • Responsibility • Impact • Service</p>
+                        <div class="flex items-center gap-2 text-inv-orange"><span class="text-[10px] font-semibold tracking-wide uppercase">Explore</span><span class="iconify club-card-arrow" data-icon="lucide:arrow-right" data-width="12"></span></div>
+                    </div>
+                </div>
+
+                <!-- Club 04 - ROCK ON -->
+                <div class="club-card relative overflow-hidden rounded-sm cursor-pointer group" onclick="showClubToast('Rock On')">
+                    <div class="relative h-64 md:h-80">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc94WJ7hFRWmLt9-hNMIWTCKop_vxS018DRUc7GDNSGiMeaQkrrd0SZOg&s=10" alt="Rock On - The Cultural Club" class="club-card-image w-full h-full object-cover">
+                        <div class="club-card-overlay absolute inset-0 bg-black/50"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                        <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-1 block">Club 04</span>
+                        <h3 class="text-xl font-display font-medium text-inv-cream mb-1 tracking-tight">ROCK ON</h3>
+                        <p class="text-[10px] font-semibold tracking-wide uppercase text-inv-silver mb-2">The Cultural Club</p>
+                        <p class="text-sm text-inv-silver/70 leading-relaxed mb-3">Music • Dance • Theatre • Culture • Performance</p>
+                        <div class="flex items-center gap-2 text-inv-orange"><span class="text-[10px] font-semibold tracking-wide uppercase">Explore Rock On</span><span class="iconify club-card-arrow" data-icon="lucide:arrow-right" data-width="12"></span></div>
+                    </div>
+                </div>
+
+                <!-- Club 05 - IMAGES (Auditorium image) -->
+                <div class="club-card relative overflow-hidden rounded-sm cursor-pointer group" onclick="showClubToast('Images')">
+                    <div class="relative h-64 md:h-80">
+                        <img src="https://media.collegedekho.com/media/img/institute/crawled_images/None/Auditorium_WdfP9m6.jpg" alt="Images - The Publication Club" class="club-card-image w-full h-full object-cover">
+                        <div class="club-card-overlay absolute inset-0 bg-black/50"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                        <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-1 block">Club 05</span>
+                        <h3 class="text-xl font-display font-medium text-inv-cream mb-1 tracking-tight">IMAGES</h3>
+                        <p class="text-[10px] font-semibold tracking-wide uppercase text-inv-silver mb-2">The Publication Club</p>
+                        <p class="text-sm text-inv-silver/70 leading-relaxed mb-3">Photography • Journalism • Media • Storytelling</p>
+                        <div class="flex items-center gap-2 text-inv-orange"><span class="text-[10px] font-semibold tracking-wide uppercase">Explore Images</span><span class="iconify club-card-arrow" data-icon="lucide:arrow-right" data-width="12"></span></div>
+                    </div>
+                </div>
+
+                <!-- Club 06 - I-TECH -->
+                <div class="club-card relative overflow-hidden rounded-sm cursor-pointer group" onclick="showClubToast('I-Tech')">
+                    <div class="relative h-64 md:h-80">
+                        <img src="https://images.shiksha.com/mediadata/images/1781000644phpu145rZ.jpeg" alt="I-Tech - The Technical Club" class="club-card-image w-full h-full object-cover">
+                        <div class="club-card-overlay absolute inset-0 bg-black/50"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                        <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-1 block">Club 06</span>
+                        <h3 class="text-xl font-display font-medium text-inv-cream mb-1 tracking-tight">I-TECH</h3>
+                        <p class="text-[10px] font-semibold tracking-wide uppercase text-inv-silver mb-2">The Technical Club</p>
+                        <p class="text-sm text-inv-silver/70 leading-relaxed mb-3">Technology • Innovation • Coding • Engineering</p>
+                        <div class="flex items-center gap-2 text-inv-orange"><span class="text-[10px] font-semibold tracking-wide uppercase">Explore I-Tech</span><span class="iconify club-card-arrow" data-icon="lucide:arrow-right" data-width="12"></span></div>
+                    </div>
+                </div>
+
+                <!-- Club 07 - STRIDE -->
+                <div class="club-card relative overflow-hidden rounded-sm cursor-pointer group" onclick="showClubToast('Stride')">
+                    <div class="relative h-64 md:h-80">
+                        <img src="https://www.invertisuniversity.ac.in/uploads/LargeImages/139al_kabbadi-img1.webp" alt="Stride - The Sports Club" class="club-card-image w-full h-full object-cover">
+                        <div class="club-card-overlay absolute inset-0 bg-black/50"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                        <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-1 block">Club 07</span>
+                        <h3 class="text-xl font-display font-medium text-inv-cream mb-1 tracking-tight">STRIDE</h3>
+                        <p class="text-[10px] font-semibold tracking-wide uppercase text-inv-silver mb-2">The Sports Club</p>
+                        <p class="text-sm text-inv-silver/70 leading-relaxed mb-3">Sports • Fitness • Competition • Teamwork</p>
+                        <div class="flex items-center gap-2 text-inv-orange"><span class="text-[10px] font-semibold tracking-wide uppercase">Explore Stride</span><span class="iconify club-card-arrow" data-icon="lucide:arrow-right" data-width="12"></span></div>
+                    </div>
+                </div>
+
+                <!-- Club 08 - M-FACTOR (Campus image) -->
+                <div class="club-card relative overflow-hidden rounded-sm cursor-pointer group" onclick="showClubToast('M-Factor')">
+                    <div class="relative h-64 md:h-80">
+                        <img src="https://images.shiksha.com/mediadata/images/1781000644phpu145rZ.jpeg" alt="M-Factor - The Management Club" class="club-card-image w-full h-full object-cover">
+                        <div class="club-card-overlay absolute inset-0 bg-black/50"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                        <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-1 block">Club 08</span>
+                        <h3 class="text-xl font-display font-medium text-inv-cream mb-1 tracking-tight">M-FACTOR</h3>
+                        <p class="text-[10px] font-semibold tracking-wide uppercase text-inv-silver mb-2">The Management Club</p>
+                        <p class="text-sm text-inv-silver/70 leading-relaxed mb-3">Leadership • Management • Entrepreneurship</p>
+                        <div class="flex items-center gap-2 text-inv-orange"><span class="text-[10px] font-semibold tracking-wide uppercase">Explore M-Factor</span><span class="iconify club-card-arrow" data-icon="lucide:arrow-right" data-width="12"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Club Discovery Section -->
+    <section id="discover" class="relative py-24 md:py-36 bg-inv-charcoal">
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12">
+            <div class="text-center mb-16 scroll-animate">
+                <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-6 block">Find Your Drive</span>
+                <h2 class="section-heading text-4xl md:text-6xl font-display font-medium tracking-tight text-inv-cream">What Drives You?</h2>
+            </div>
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-12 scroll-animate">
+                <button class="filter-btn active px-6 py-3 border border-inv-graphite-light/30 text-xs font-semibold tracking-wide uppercase rounded-sm" data-filter="all">All</button>
+                <button class="filter-btn px-6 py-3 border border-inv-graphite-light/30 text-inv-silver text-xs font-semibold tracking-wide uppercase rounded-sm hover:border-inv-orange hover:text-inv-orange" data-filter="create">Create</button>
+                <button class="filter-btn px-6 py-3 border border-inv-graphite-light/30 text-inv-silver text-xs font-semibold tracking-wide uppercase rounded-sm hover:border-inv-orange hover:text-inv-orange" data-filter="perform">Perform</button>
+                <button class="filter-btn px-6 py-3 border border-inv-graphite-light/30 text-inv-silver text-xs font-semibold tracking-wide uppercase rounded-sm hover:border-inv-orange hover:text-inv-orange" data-filter="build">Build</button>
+                <button class="filter-btn px-6 py-3 border border-inv-graphite-light/30 text-inv-silver text-xs font-semibold tracking-wide uppercase rounded-sm hover:border-inv-orange hover:text-inv-orange" data-filter="lead">Lead</button>
+                <button class="filter-btn px-6 py-3 border border-inv-graphite-light/30 text-inv-silver text-xs font-semibold tracking-wide uppercase rounded-sm hover:border-inv-orange hover:text-inv-orange" data-filter="compete">Compete</button>
+                <button class="filter-btn px-6 py-3 border border-inv-graphite-light/30 text-inv-silver text-xs font-semibold tracking-wide uppercase rounded-sm hover:border-inv-orange hover:text-inv-orange" data-filter="impact">Impact</button>
+            </div>
+            <div id="clubGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="club-filter-item border border-inv-graphite-light/20 p-6 md:p-8 hover:border-inv-orange/40 transition-all duration-500" data-category="create"><div class="flex items-start justify-between mb-4"><span class="text-3xl font-display font-medium text-inv-orange/20">01</span><span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange bg-inv-orange/10 px-2 py-1">Create</span></div><h3 class="text-xl font-display font-medium text-inv-cream mb-1">ABHIRUCHI</h3><p class="text-xs font-semibold tracking-wide uppercase text-inv-silver mb-3">The Hobby Club</p><p class="text-sm text-inv-silver/60 leading-relaxed">Interests • Hobbies • Creativity • Personal Expression</p></div>
+                <div class="club-filter-item border border-inv-graphite-light/20 p-6 md:p-8 hover:border-inv-orange/40 transition-all duration-500" data-category="create"><div class="flex items-start justify-between mb-4"><span class="text-3xl font-display font-medium text-inv-orange/20">02</span><span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange bg-inv-orange/10 px-2 py-1">Create</span></div><h3 class="text-xl font-display font-medium text-inv-cream mb-1">PANACHE</h3><p class="text-xs font-semibold tracking-wide uppercase text-inv-silver mb-3">The Arts Club</p><p class="text-sm text-inv-silver/60 leading-relaxed">Art • Design • Creativity • Expression</p></div>
+                <div class="club-filter-item border border-inv-graphite-light/20 p-6 md:p-8 hover:border-inv-orange/40 transition-all duration-500" data-category="impact"><div class="flex items-start justify-between mb-4"><span class="text-3xl font-display font-medium text-inv-orange/20">03</span><span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange bg-inv-orange/10 px-2 py-1">Impact</span></div><h3 class="text-xl font-display font-medium text-inv-cream mb-1 leading-tight">THE RESPONSIBLE INVERTIAN</h3><p class="text-xs font-semibold tracking-wide uppercase text-inv-silver mb-3">The Social Club</p><p class="text-sm text-inv-silver/60 leading-relaxed">Community • Social Responsibility • Impact • Service</p></div>
+                <div class="club-filter-item border border-inv-graphite-light/20 p-6 md:p-8 hover:border-inv-orange/40 transition-all duration-500" data-category="perform"><div class="flex items-start justify-between mb-4"><span class="text-3xl font-display font-medium text-inv-orange/20">04</span><span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange bg-inv-orange/10 px-2 py-1">Perform</span></div><h3 class="text-xl font-display font-medium text-inv-cream mb-1">ROCK ON</h3><p class="text-xs font-semibold tracking-wide uppercase text-inv-silver mb-3">The Cultural Club</p><p class="text-sm text-inv-silver/60 leading-relaxed">Music • Dance • Theatre • Culture • Performance</p></div>
+                <div class="club-filter-item border border-inv-graphite-light/20 p-6 md:p-8 hover:border-inv-orange/40 transition-all duration-500" data-category="create"><div class="flex items-start justify-between mb-4"><span class="text-3xl font-display font-medium text-inv-orange/20">05</span><span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange bg-inv-orange/10 px-2 py-1">Create</span></div><h3 class="text-xl font-display font-medium text-inv-cream mb-1">IMAGES</h3><p class="text-xs font-semibold tracking-wide uppercase text-inv-silver mb-3">The Publication Club</p><p class="text-sm text-inv-silver/60 leading-relaxed">Photography • Journalism • Media • Storytelling</p></div>
+                <div class="club-filter-item border border-inv-graphite-light/20 p-6 md:p-8 hover:border-inv-orange/40 transition-all duration-500" data-category="build"><div class="flex items-start justify-between mb-4"><span class="text-3xl font-display font-medium text-inv-orange/20">06</span><span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange bg-inv-orange/10 px-2 py-1">Build</span></div><h3 class="text-xl font-display font-medium text-inv-cream mb-1">I-TECH</h3><p class="text-xs font-semibold tracking-wide uppercase text-inv-silver mb-3">The Technical Club</p><p class="text-sm text-inv-silver/60 leading-relaxed">Technology • Innovation • Coding • Engineering</p></div>
+                <div class="club-filter-item border border-inv-graphite-light/20 p-6 md:p-8 hover:border-inv-orange/40 transition-all duration-500" data-category="compete"><div class="flex items-start justify-between mb-4"><span class="text-3xl font-display font-medium text-inv-orange/20">07</span><span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange bg-inv-orange/10 px-2 py-1">Compete</span></div><h3 class="text-xl font-display font-medium text-inv-cream mb-1">STRIDE</h3><p class="text-xs font-semibold tracking-wide uppercase text-inv-silver mb-3">The Sports Club</p><p class="text-sm text-inv-silver/60 leading-relaxed">Sports • Fitness • Competition • Teamwork</p></div>
+                <div class="club-filter-item border border-inv-graphite-light/20 p-6 md:p-8 hover:border-inv-orange/40 transition-all duration-500" data-category="lead"><div class="flex items-start justify-between mb-4"><span class="text-3xl font-display font-medium text-inv-orange/20">08</span><span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange bg-inv-orange/10 px-2 py-1">Lead</span></div><h3 class="text-xl font-display font-medium text-inv-cream mb-1">M-FACTOR</h3><p class="text-xs font-semibold tracking-wide uppercase text-inv-silver mb-3">The Management Club</p><p class="text-sm text-inv-silver/60 leading-relaxed">Leadership • Management • Entrepreneurship • Strategy</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Section -->
+    <section class="relative py-24 md:py-36 bg-black">
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12">
+            <div class="text-center mb-16 md:mb-24 scroll-animate">
+                <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-6 block">Beyond the Classroom</span>
+                <h2 class="section-heading text-4xl md:text-6xl lg:text-7xl font-display font-medium tracking-tight text-inv-cream">Your Classroom Is Only<br><span class="text-inv-orange">The Beginning.</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="benefit-card border border-inv-graphite-light/20 p-8 md:p-10 scroll-animate"><span class="benefit-number text-5xl md:text-6xl font-display font-medium text-inv-cream/10 transition-colors duration-300 block mb-4">01</span><h3 class="text-xl font-display font-medium text-inv-cream mb-3 tracking-tight">DISCOVER</h3><p class="text-sm text-inv-silver/70 leading-relaxed">Find interests beyond academics.</p></div>
+                <div class="benefit-card border border-inv-graphite-light/20 p-8 md:p-10 scroll-animate"><span class="benefit-number text-5xl md:text-6xl font-display font-medium text-inv-cream/10 transition-colors duration-300 block mb-4">02</span><h3 class="text-xl font-display font-medium text-inv-cream mb-3 tracking-tight">CREATE</h3><p class="text-sm text-inv-silver/70 leading-relaxed">Turn ideas into projects, performances and experiences.</p></div>
+                <div class="benefit-card border border-inv-graphite-light/20 p-8 md:p-10 scroll-animate"><span class="benefit-number text-5xl md:text-6xl font-display font-medium text-inv-cream/10 transition-colors duration-300 block mb-4">03</span><h3 class="text-xl font-display font-medium text-inv-cream mb-3 tracking-tight">CONNECT</h3><p class="text-sm text-inv-silver/70 leading-relaxed">Meet students who share your passions.</p></div>
+                <div class="benefit-card border border-inv-graphite-light/20 p-8 md:p-10 scroll-animate"><span class="benefit-number text-5xl md:text-6xl font-display font-medium text-inv-cream/10 transition-colors duration-300 block mb-4">04</span><h3 class="text-xl font-display font-medium text-inv-cream mb-3 tracking-tight">LEAD</h3><p class="text-sm text-inv-silver/70 leading-relaxed">Build confidence and leadership skills.</p></div>
+                <div class="benefit-card border border-inv-graphite-light/20 p-8 md:p-10 scroll-animate"><span class="benefit-number text-5xl md:text-6xl font-display font-medium text-inv-cream/10 transition-colors duration-300 block mb-4">05</span><h3 class="text-xl font-display font-medium text-inv-cream mb-3 tracking-tight">COMPETE</h3><p class="text-sm text-inv-silver/70 leading-relaxed">Challenge yourself through events and competitions.</p></div>
+                <div class="benefit-card border border-inv-graphite-light/20 p-8 md:p-10 scroll-animate"><span class="benefit-number text-5xl md:text-6xl font-display font-medium text-inv-cream/10 transition-colors duration-300 block mb-4">06</span><h3 class="text-xl font-display font-medium text-inv-cream mb-3 tracking-tight">CONTRIBUTE</h3><p class="text-sm text-inv-silver/70 leading-relaxed">Create meaningful impact within the campus and society.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Life Section -->
+    <section id="campus" class="relative py-24 md:py-36 bg-inv-charcoal overflow-hidden">
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12 mb-12">
+            <div class="scroll-animate">
+                <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-6 block">Campus Life</span>
+                <h2 class="section-heading text-4xl md:text-6xl font-display font-medium tracking-tight text-inv-cream">Life Happens Between<br><span class="text-inv-orange">The Classes.</span></h2>
+            </div>
+        </div>
+        <div class="flex gap-4 overflow-x-auto no-scrollbar pb-8 px-6 md:px-12" id="campusGallery">
+            <div class="gallery-item relative flex-shrink-0 w-72 md:w-96 h-96 md:h-[500px] rounded-sm overflow-hidden">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc94WJ7hFRWmLt9-hNMIWTCKop_vxS018DRUc7GDNSGiMeaQkrrd0SZOg&s=10" alt="Cultural Events" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <span class="absolute bottom-6 left-6 text-xs font-semibold tracking-ultra-wide uppercase text-inv-orange">Perform</span>
+            </div>
+            <div class="gallery-item relative flex-shrink-0 w-72 md:w-96 h-96 md:h-[500px] rounded-sm overflow-hidden">
+                <img src="https://www.invertisuniversity.ac.in/uploads/LargeImages/139al_kabbadi-img1.webp" alt="Sports" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <span class="absolute bottom-6 left-6 text-xs font-semibold tracking-ultra-wide uppercase text-inv-orange">Compete</span>
+            </div>
+            <div class="gallery-item relative flex-shrink-0 w-72 md:w-96 h-96 md:h-[500px] rounded-sm overflow-hidden">
+                <img src="https://images.shiksha.com/mediadata/images/1781000644phpu145rZ.jpeg" alt="Campus Infrastructure" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <span class="absolute bottom-6 left-6 text-xs font-semibold tracking-ultra-wide uppercase text-inv-orange">Build</span>
+            </div>
+            <div class="gallery-item relative flex-shrink-0 w-72 md:w-96 h-96 md:h-[500px] rounded-sm overflow-hidden">
+                <img src="https://www.invertisuniversity.ac.in/images/abhiruchi-clubs-5.webp" alt="Art & Creativity" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <span class="absolute bottom-6 left-6 text-xs font-semibold tracking-ultra-wide uppercase text-inv-orange">Create</span>
+            </div>
+            <div class="gallery-item relative flex-shrink-0 w-72 md:w-96 h-96 md:h-[500px] rounded-sm overflow-hidden">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5HJeXL_5CoKkI5aKKuSjdA_7ChIv6yE6GY0GwugTfwsBBiOXARj_s8yC7&s=10" alt="Social Initiatives" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <span class="absolute bottom-6 left-6 text-xs font-semibold tracking-ultra-wide uppercase text-inv-orange">Impact</span>
+            </div>
+            <div class="gallery-item relative flex-shrink-0 w-72 md:w-96 h-96 md:h-[500px] rounded-sm overflow-hidden">
+                <img src="https://media.collegedekho.com/media/img/institute/crawled_images/None/Auditorium_WdfP9m6.jpg" alt="Auditorium Events" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <span class="absolute bottom-6 left-6 text-xs font-semibold tracking-ultra-wide uppercase text-inv-orange">Lead</span>
+            </div>
+            <div class="gallery-item relative flex-shrink-0 w-72 md:w-96 h-96 md:h-[500px] rounded-sm overflow-hidden">
+                <img src="https://www.invertisuniversity.ac.in/uploads/image/20260306051325.webp" alt="Student Activities" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <span class="absolute bottom-6 left-6 text-xs font-semibold tracking-ultra-wide uppercase text-inv-orange">Connect</span>
+            </div>
+            <div class="gallery-item relative flex-shrink-0 w-72 md:w-96 h-96 md:h-[500px] rounded-sm overflow-hidden">
+                <img src="https://www.invertisuniversity.ac.in/uploads/image/20260311064128.webp" alt="Campus Community" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <span class="absolute bottom-6 left-6 text-xs font-semibold tracking-ultra-wide uppercase text-inv-orange">Discover</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- University Ethos Section -->
+    <section class="relative py-24 md:py-36 bg-black">
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12">
+            <div class="text-center mb-16 md:mb-24 scroll-animate">
+                <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-6 block">Our Values</span>
+                <h2 class="section-heading text-4xl md:text-6xl font-display font-medium tracking-tight text-inv-cream">What We Stand For.</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="value-card border border-inv-graphite-light/20 p-8 md:p-10 scroll-animate"><span class="value-title text-lg font-display font-medium text-inv-cream transition-colors duration-300 block mb-3">DIVERSITY</span><div class="w-8 h-px bg-inv-silver/30 mb-4"></div><p class="text-sm text-inv-silver/70 leading-relaxed">Different perspectives. One community.</p></div>
+                <div class="value-card border border-inv-graphite-light/20 p-8 md:p-10 scroll-animate"><span class="value-title text-lg font-display font-medium text-inv-cream transition-colors duration-300 block mb-3">ENGAGEMENT</span><div class="w-8 h-px bg-inv-silver/30 mb-4"></div><p class="text-sm text-inv-silver/70 leading-relaxed">Learning through experience.</p></div>
+                <div class="value-card border border-inv-graphite-light/20 p-8 md:p-10 scroll-animate"><span class="value-title text-lg font-display font-medium text-inv-cream transition-colors duration-300 block mb-3">INTEGRITY</span><div class="w-8 h-px bg-inv-silver/30 mb-4"></div><p class="text-sm text-inv-silver/70 leading-relaxed">Doing what is right.</p></div>
+                <div class="value-card border border-inv-graphite-light/20 p-8 md:p-10 scroll-animate"><span class="value-title text-lg font-display font-medium text-inv-cream transition-colors duration-300 block mb-3">INCLUSION</span><div class="w-8 h-px bg-inv-silver/30 mb-4"></div><p class="text-sm text-inv-silver/70 leading-relaxed">Everyone belongs.</p></div>
+                <div class="value-card border border-inv-graphite-light/20 p-8 md:p-10 scroll-animate"><span class="value-title text-lg font-display font-medium text-inv-cream transition-colors duration-300 block mb-3">SUSTAINABILITY</span><div class="w-8 h-px bg-inv-silver/30 mb-4"></div><p class="text-sm text-inv-silver/70 leading-relaxed">Building a responsible future.</p></div>
+                <div class="value-card border border-inv-graphite-light/20 p-8 md:p-10 scroll-animate"><span class="value-title text-lg font-display font-medium text-inv-cream transition-colors duration-300 block mb-3">INNOVATION</span><div class="w-8 h-px bg-inv-silver/30 mb-4"></div><p class="text-sm text-inv-silver/70 leading-relaxed">Question. Create. Transform.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="relative py-24 md:py-36 bg-inv-charcoal">
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12">
+            <div class="grid lg:grid-cols-2 gap-12 md:gap-20">
+                <div class="scroll-animate-left">
+                    <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-8 block">Vision</span>
+                    <div class="relative"><span class="absolute -top-8 -left-4 text-7xl md:text-9xl font-display text-inv-silver/10 leading-none">"</span><p class="text-xl md:text-2xl lg:text-3xl font-display font-medium text-inv-cream leading-relaxed pl-4 md:pl-8">To groom professionals of caliber and competence who will bring about a qualitative change to the nation through their contributions.</p></div>
+                </div>
+                <div class="scroll-animate-right">
+                    <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-8 block">Mission</span>
+                    <div class="relative"><span class="absolute -top-8 -left-4 text-7xl md:text-9xl font-display text-inv-silver/10 leading-none">"</span><p class="text-base md:text-lg font-light text-inv-silver leading-relaxed pl-4 md:pl-8">To provide quality education for all deserving students sans caste, creed, gender or money and present a real projection of education as a guiding torch for the development of human society.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage Timeline Section -->
+    <section id="heritage" class="relative py-24 md:py-36 bg-black overflow-hidden">
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12">
+            <div class="text-center mb-16 md:mb-24 scroll-animate">
+                <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-6 block">Our Journey</span>
+                <h2 class="section-heading text-4xl md:text-6xl font-display font-medium tracking-tight text-inv-cream">From an Idea to<br><span class="text-inv-orange">A Community.</span></h2>
+            </div>
+            <div class="hidden md:block">
+                <div class="relative">
+                    <div class="absolute top-1/2 left-0 right-0 h-px bg-inv-graphite-light/20"></div>
+                    <div class="flex justify-between items-center relative">
+                        <div class="flex flex-col items-center scroll-animate"><div class="timeline-dot w-4 h-4 rounded-full border-2 border-inv-silver/40 bg-inv-charcoal mb-6 cursor-pointer z-10"></div><div class="bg-inv-charcoal border border-inv-graphite-light/20 p-6 rounded-sm max-w-xs"><span class="text-3xl font-display font-medium text-inv-orange block mb-2">1998</span><p class="text-sm text-inv-silver leading-relaxed">Invertis Institute of Management Studies begins its journey.</p></div></div>
+                        <div class="flex flex-col items-center scroll-animate"><div class="timeline-dot w-4 h-4 rounded-full border-2 border-inv-silver/40 bg-inv-charcoal mb-6 cursor-pointer z-10"></div><div class="bg-inv-charcoal border border-inv-graphite-light/20 p-6 rounded-sm max-w-xs"><span class="text-3xl font-display font-medium text-inv-orange block mb-2">2010</span><p class="text-sm text-inv-silver leading-relaxed">Invertis University established through an Act of the State Government and approved by UGC.</p></div></div>
+                        <div class="flex flex-col items-center scroll-animate"><div class="timeline-dot w-4 h-4 rounded-full border-2 border-inv-silver/40 bg-inv-charcoal mb-6 cursor-pointer z-10"></div><div class="bg-inv-charcoal border border-inv-graphite-light/20 p-6 rounded-sm max-w-xs"><span class="text-3xl font-display font-medium text-inv-orange block mb-2">2021</span><p class="text-sm text-inv-silver leading-relaxed">University receives NAAC accreditation.</p></div></div>
+                        <div class="flex flex-col items-center scroll-animate"><div class="timeline-dot w-5 h-5 rounded-full border-2 border-inv-orange bg-inv-orange mb-6 cursor-pointer z-10 animate-pulse"></div><div class="bg-inv-charcoal border border-inv-orange/30 p-6 rounded-sm max-w-xs"><span class="text-3xl font-display font-medium text-inv-orange block mb-2">Today</span><p class="text-sm text-inv-silver leading-relaxed">A growing private university offering programmes across multiple disciplines and creating opportunities for holistic student development.</p></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:hidden space-y-8">
+                <div class="flex gap-4 scroll-animate"><div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-inv-orange"></div><div class="w-px h-full bg-inv-graphite-light/20"></div></div><div class="pb-8"><span class="text-2xl font-display font-medium text-inv-orange block mb-2">1998</span><p class="text-sm text-inv-silver leading-relaxed">Invertis Institute of Management Studies begins its journey.</p></div></div>
+                <div class="flex gap-4 scroll-animate"><div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-inv-silver/40"></div><div class="w-px h-full bg-inv-graphite-light/20"></div></div><div class="pb-8"><span class="text-2xl font-display font-medium text-inv-orange block mb-2">2010</span><p class="text-sm text-inv-silver leading-relaxed">Invertis University established through an Act of the State Government and approved by UGC.</p></div></div>
+                <div class="flex gap-4 scroll-animate"><div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-inv-silver/40"></div><div class="w-px h-full bg-inv-graphite-light/20"></div></div><div class="pb-8"><span class="text-2xl font-display font-medium text-inv-orange block mb-2">2021</span><p class="text-sm text-inv-silver leading-relaxed">University receives NAAC accreditation.</p></div></div>
+                <div class="flex gap-4 scroll-animate"><div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-inv-orange animate-pulse"></div></div><div><span class="text-2xl font-display font-medium text-inv-orange block mb-2">Today</span><p class="text-sm text-inv-silver leading-relaxed">A growing private university offering programmes across multiple disciplines and creating opportunities for holistic student development.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- International Collaborations Section -->
+    <section class="relative py-24 md:py-36 bg-inv-charcoal overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <svg class="w-full h-full" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="300" cy="200" r="100" stroke="#C0C0C0" stroke-width="0.5"/><circle cx="700" cy="300" r="120" stroke="#C0C0C0" stroke-width="0.5"/><circle cx="500" cy="400" r="80" stroke="#C0C0C0" stroke-width="0.5"/><line x1="300" y1="200" x2="700" y2="300" stroke="#F97316" stroke-width="0.5" class="world-map-line"/><line x1="700" y1="300" x2="500" y2="400" stroke="#2563EB" stroke-width="0.5" class="world-map-line" style="animation-delay: 1s"/><line x1="300" y1="200" x2="500" y2="400" stroke="#F97316" stroke-width="0.5" class="world-map-line" style="animation-delay: 2s"/><circle cx="300" cy="200" r="3" fill="#F97316"/><circle cx="700" cy="300" r="3" fill="#2563EB"/><circle cx="500" cy="400" r="3" fill="#F97316"/></svg>
+        </div>
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="scroll-animate-left">
+                    <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-6 block">Global Reach</span>
+                    <h2 class="section-heading text-4xl md:text-6xl font-display font-medium tracking-tight text-inv-cream mb-8">Think Beyond<br><span class="text-inv-orange">Borders.</span></h2>
+                    <p class="text-sm md:text-base text-inv-silver leading-relaxed max-w-lg">Invertis University's International Collaboration Cell facilitates academic, research and knowledge exchange with reputed international universities and institutions.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-5 scroll-animate-right">
+                    <div class="border border-inv-graphite-light/20 p-6 hover:border-inv-blue-electric/40 transition-all duration-300"><span class="iconify text-inv-blue-electric mb-4" data-icon="lucide:globe" data-width="24"></span><span class="text-sm font-semibold text-inv-cream block mb-1">Global Exposure</span><p class="text-xs text-inv-silver/60">International perspectives</p></div>
+                    <div class="border border-inv-graphite-light/20 p-6 hover:border-inv-blue-electric/40 transition-all duration-300"><span class="iconify text-inv-blue-electric mb-4" data-icon="lucide:repeat" data-width="24"></span><span class="text-sm font-semibold text-inv-cream block mb-1">Knowledge Exchange</span><p class="text-xs text-inv-silver/60">Cross-cultural learning</p></div>
+                    <div class="border border-inv-graphite-light/20 p-6 hover:border-inv-blue-electric/40 transition-all duration-300"><span class="iconify text-inv-blue-electric mb-4" data-icon="lucide:users" data-width="24"></span><span class="text-sm font-semibold text-inv-cream block mb-1">Student & Faculty Exchange</span><p class="text-xs text-inv-silver/60">Study abroad programs</p></div>
+                    <div class="border border-inv-graphite-light/20 p-6 hover:border-inv-blue-electric/40 transition-all duration-300"><span class="iconify text-inv-blue-electric mb-4" data-icon="lucide:flask-conical" data-width="24"></span><span class="text-sm font-semibold text-inv-cream block mb-1">Research Collaboration</span><p class="text-xs text-inv-silver/60">Joint research initiatives</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parichay Section -->
+    <section class="relative py-24 md:py-36 bg-black">
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12">
+            <div class="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
+                <div class="relative scroll-animate-left">
+                    <div class="relative h-80 md:h-[500px] rounded-sm overflow-hidden">
+                        <img src="https://media.collegedekho.com/media/img/institute/crawled_images/None/Auditorium_WdfP9m6.jpg" alt="Parichay - University Brochure" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute top-6 left-6"><span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange bg-black/50 px-3 py-1.5 inline-block">Publication</span></div>
+                    </div>
+                </div>
+                <div class="scroll-animate-right">
+                    <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-6 block">University Publication</span>
+                    <h2 class="section-heading text-3xl md:text-5xl font-display font-medium tracking-tight text-inv-cream mb-6">Meet the People Behind<br><span class="text-inv-orange">The University.</span></h2>
+                    <p class="text-sm md:text-base text-inv-silver leading-relaxed mb-8 max-w-lg">Discover Invertis University through <strong class="text-inv-cream font-medium">Parichay</strong>, the university's informative orientation brochure featuring its people, activities, achievements, collaborations and campus journey.</p>
+                    <a href="#" class="magnetic-btn inline-flex items-center gap-2 px-8 py-3.5 bg-inv-orange text-black text-xs font-semibold tracking-wide uppercase hover:bg-inv-orange-glow transition-all duration-300" onclick="event.preventDefault(); showToast('Parichay brochure will be available for download soon.')">View Parichay <span class="iconify" data-icon="lucide:arrow-right" data-width="14"></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Join Section -->
+    <section id="contact" class="relative py-24 md:py-36 bg-inv-charcoal overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.shiksha.com/mediadata/images/1781000644phpu145rZ.jpeg" alt="Invertis Community" class="w-full h-full object-cover opacity-15">
+            <div class="absolute inset-0 bg-gradient-to-t from-inv-charcoal via-inv-charcoal/90 to-inv-charcoal/70"></div>
+        </div>
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12 relative z-10">
+            <div class="max-w-4xl mx-auto text-center mb-16 scroll-animate">
+                <h2 class="section-heading text-4xl md:text-6xl lg:text-7xl font-display font-medium tracking-tight text-inv-cream mb-6">Your Story<br><span class="text-inv-orange">Starts Here.</span></h2>
+                <p class="text-lg md:text-xl font-light text-inv-silver mb-10">Find your club. Find your people. Build something that matters.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#clubs" class="magnetic-btn px-8 py-3.5 bg-inv-orange text-black text-xs font-semibold tracking-wide uppercase hover:bg-inv-orange-glow transition-all duration-300">Explore All Clubs</a>
+                    <a href="#" class="magnetic-btn px-8 py-3.5 border border-inv-silver/30 text-inv-cream text-xs font-semibold tracking-wide uppercase hover:border-inv-orange hover:text-inv-orange transition-all duration-300" onclick="event.preventDefault(); document.getElementById('contactForm').scrollIntoView({behavior:'smooth'})">Connect with Invertis</a>
+                </div>
+            </div>
+            <div id="contactForm" class="max-w-3xl mx-auto scroll-animate">
+                <div class="border border-inv-graphite-light/20 p-8 md:p-12 bg-black/30 backdrop-blur-sm rounded-sm">
+                    <h3 class="text-xl font-display font-medium text-inv-cream mb-6 tracking-tight">Get in Touch</h3>
+                    <form id="invertisContactForm" class="space-y-5">
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div><label class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-silver mb-2 block">Full Name</label><input type="text" class="w-full bg-transparent border-b border-inv-graphite-light/30 text-inv-cream text-sm py-3 focus:border-inv-orange transition-colors duration-300 placeholder:text-inv-silver/30" placeholder="Your name" required></div>
+                            <div><label class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-silver mb-2 block">Email</label><input type="email" class="w-full bg-transparent border-b border-inv-graphite-light/30 text-inv-cream text-sm py-3 focus:border-inv-orange transition-colors duration-300 placeholder:text-inv-silver/30" placeholder="your.email@example.com" required></div>
+                        </div>
+                        <div><label class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-silver mb-2 block">Interested Club</label><select class="w-full bg-transparent border-b border-inv-graphite-light/30 text-inv-silver text-sm py-3 focus:border-inv-orange transition-colors duration-300"><option value="" class="bg-inv-charcoal">Select a club</option><option value="abhiruchi" class="bg-inv-charcoal">Abhiruchi - The Hobby Club</option><option value="panache" class="bg-inv-charcoal">Panache - The Arts Club</option><option value="responsible" class="bg-inv-charcoal">The Responsible Invertian - Social Club</option><option value="rockon" class="bg-inv-charcoal">Rock On - The Cultural Club</option><option value="images" class="bg-inv-charcoal">Images - The Publication Club</option><option value="itech" class="bg-inv-charcoal">I-Tech - The Technical Club</option><option value="stride" class="bg-inv-charcoal">Stride - The Sports Club</option><option value="mfactor" class="bg-inv-charcoal">M-Factor - The Management Club</option></select></div>
+                        <div><label class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-silver mb-2 block">Message</label><textarea rows="3" class="w-full bg-transparent border-b border-inv-graphite-light/30 text-inv-cream text-sm py-3 focus:border-inv-orange transition-colors duration-300 placeholder:text-inv-silver/30 resize-none" placeholder="Tell us about your interest..."></textarea></div>
+                        <button type="submit" class="magnetic-btn px-8 py-3.5 bg-inv-orange text-black text-xs font-semibold tracking-wide uppercase hover:bg-inv-orange-glow transition-all duration-300 w-full md:w-auto">Send Message</button>
+                    </form>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 mt-12">
+                    <div><span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-4 block">Address</span><p class="text-sm text-inv-silver leading-relaxed">Invertis University<br>Delhi Lucknow Highway NH-24<br>Bareilly, Rajau Paraspur<br>Uttar Pradesh 243123</p></div>
+                    <div><span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-4 block">Contact</span><p class="text-sm text-inv-silver leading-relaxed"><a href="tel:+919690955599" class="hover:text-inv-orange transition-colors duration-150">+91 9690955599</a><br><a href="tel:05812429000" class="hover:text-inv-orange transition-colors duration-150">0581-2429000</a></p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Statement -->
+    <section class="relative py-20 md:py-32 bg-black text-center">
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12 scroll-animate">
+            <div class="mb-10"><img src="https://www.invertisuniversity.ac.in/images/logo.png" alt="Invertis University" class="h-16 md:h-20 mx-auto mb-8 logo-white opacity-80"></div>
+            <div class="flex items-center justify-center gap-4 md:gap-6 mb-8"><div class="h-px w-12 md:w-20 bg-inv-orange/30"></div><span class="text-6xl md:text-8xl font-display font-medium text-inv-cream">8</span><div class="h-px w-12 md:w-20 bg-inv-orange/30"></div></div>
+            <p class="text-sm md:text-base font-semibold tracking-ultra-wide uppercase text-inv-silver mb-4">Clubs</p>
+            <div class="w-16 h-px bg-inv-orange mx-auto mb-8"></div>
+            <p class="text-sm md:text-base font-semibold tracking-ultra-wide uppercase text-inv-silver mb-6">One Community</p>
+            <h3 class="text-2xl md:text-4xl font-display font-medium tracking-tight text-inv-cream">Imagine. Innovate. <span class="text-inv-orange">Challenge.</span></h3>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-inv-charcoal border-t border-inv-graphite-light/10">
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12 py-16 md:py-20">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="mb-6"><img src="https://www.invertisuniversity.ac.in/images/logo.png" alt="Invertis University" class="inv-logo-footer hover:opacity-100 transition-opacity duration-300"></div>
+                    <p class="text-xs font-semibold tracking-wide uppercase text-inv-orange mb-4">Imagine. Innovate. Challenge.</p>
+                    <p class="text-sm text-inv-silver/60 leading-relaxed">Delhi Lucknow Highway NH-24<br>Bareilly, Rajau Paraspur<br>Uttar Pradesh 243123</p>
+                </div>
+                <div>
+                    <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-6 block">University</span>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">About University</a></li>
+                        <li><a href="#clubs" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">Student Clubs</a></li>
+                        <li><a href="#campus" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">Campus Life</a></li>
+                        <li><a href="#heritage" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">Heritage</a></li>
+                        <li><a href="#contact" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-6 block">Student Clubs</span>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">Abhiruchi</a></li>
+                        <li><a href="#" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">Panache</a></li>
+                        <li><a href="#" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">The Responsible Invertian</a></li>
+                        <li><a href="#" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">Rock On</a></li>
+                        <li><a href="#" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">Images</a></li>
+                        <li><a href="#" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">I-Tech</a></li>
+                        <li><a href="#" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">Stride</a></li>
+                        <li><a href="#" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">M-Factor</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <span class="text-[10px] font-semibold tracking-ultra-wide uppercase text-inv-orange mb-6 block">Connect</span>
+                    <ul class="space-y-3 mb-6">
+                        <li><a href="tel:+919690955599" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">+91 9690955599</a></li>
+                        <li><a href="tel:05812429000" class="text-sm text-inv-silver hover:text-inv-cream transition-colors duration-150">0581-2429000</a></li>
+                    </ul>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-9 h-9 border border-inv-graphite-light/20 rounded-sm flex items-center justify-center text-inv-silver hover:border-inv-orange hover:text-inv-orange transition-all duration-300"><span class="iconify" data-icon="lucide:facebook" data-width="16"></span></a>
+                        <a href="#" class="w-9 h-9 border border-inv-graphite-light/20 rounded-sm flex items-center justify-center text-inv-silver hover:border-inv-orange hover:text-inv-orange transition-all duration-300"><span class="iconify" data-icon="lucide:instagram" data-width="16"></span></a>
+                        <a href="#" class="w-9 h-9 border border-inv-graphite-light/20 rounded-sm flex items-center justify-center text-inv-silver hover:border-inv-orange hover:text-inv-orange transition-all duration-300"><span class="iconify" data-icon="lucide:twitter" data-width="16"></span></a>
+                        <a href="#" class="w-9 h-9 border border-inv-graphite-light/20 rounded-sm flex items-center justify-center text-inv-silver hover:border-inv-orange hover:text-inv-orange transition-all duration-300"><span class="iconify" data-icon="lucide:linkedin" data-width="16"></span></a>
+                        <a href="#" class="w-9 h-9 border border-inv-graphite-light/20 rounded-sm flex items-center justify-center text-inv-silver hover:border-inv-orange hover:text-inv-orange transition-all duration-300"><span class="iconify" data-icon="lucide:youtube" data-width="16"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-inv-graphite-light/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-inv-silver/50">© 2025 Invertis University, Bareilly. All rights reserved.</p>
+                <p class="text-xs text-inv-silver/50">Student Clubs & Campus Community Platform</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast"><p id="toastMessage" class="text-sm"></p></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
